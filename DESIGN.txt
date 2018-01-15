@@ -1,0 +1,24 @@
+It's a standard Spring Boot MVC application
+
+ - Model layer is represented by package com.example.caesar.domain. It has one entity - Alphabet which is used for storing
+   various western and non-western alphabets sequences. Also Spring JPA repository is used for managing the model
+   (see package com.example.caesar.repository).
+
+ - Service layer is represented by package com.example.caesar.service. It contains interface and implemenation of CaesarService.
+   This service allows to:
+   a) Get all available languages for encoding/decoding
+   b) Use methods for encoding and decoding
+
+ - Package  com.example.caesar.controller contains RESTController that consists of three GET methods:
+   a) getLocales - returns languages as an JSON array of string
+   b) encode - returns ok status and encoded string or 406 status and error message
+   c) decode - returns ok status and decoded string or 406 status and error message
+
+ - Front-end is implemented with AngularJs and allows user to input string for encoding/decoding and to chose language. By default
+   browser language is used.
+
+ - Application uses H2 in-memory database which is initialized on application start. (see resoures/data.sql). There are four languages
+   available from the start: English, German, French and Russian.
+
+ - And the last part is unit tests. There are two sets of tests in two classes. ControllerTest contains unit tests for controller and uses
+   Mochito to mock services. EncodeDecodeTest contains unit tests for encoding service itself.

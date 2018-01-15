@@ -1,13 +1,6 @@
-FORMAT: 1A
-HOST:
-
-# Application 
-
-It is a simple application for encoding/decoding
-
 ## Build application
     export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8 //linux/mac or
-    set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8    //windows
+    set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8     //windows
 	mvn package
 
 ## Start server
@@ -23,5 +16,4 @@ It is a simple application for encoding/decoding
 ### Decode [GET /decode?query={query}&locale={locale}]
 
 ### Get Available Locales [GET /locales]
-
 

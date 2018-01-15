@@ -1,0 +1,14 @@
+<form novalidate>
+    <div>
+        <select ng-model="obj.locale" ng-options="x for x in locales" ng-selected="$first">
+            <option value="">-- choose language --</option>
+        </select>
+        <input type="text" name="obj.query" ng-model="obj.query" required>
+        <input type="submit" value="encode" ng-click="encode()">
+        <input type="submit" value="decode" ng-click="decode()">
+        <input type="submit" value="reset" ng-click="reset()">
+    </div>
+    <br/>
+    <span>Result: {{result}}</span>
+    <span ng-error style="color: red;">{{error}}</span>
+</form>
