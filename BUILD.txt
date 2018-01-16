@@ -1,4 +1,6 @@
 ## Build application
+    //if you use java9 than it is necessary to copy pom from pom.xml.java9 to pom.xml
+
     export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8 //linux/mac or
     set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8     //windows
 	mvn package
